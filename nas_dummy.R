@@ -98,3 +98,5 @@ df_steer <- data.frame(uniqueNo = seq(48001,72000),
                         btf = rtruncnorm(n=24000, a=2, b=35, mean = 16, sd=6.5),
                         ema = rtruncnorm(n=24000, a=62, b=116, mean = 95, sd=11))    
 df_all <- rbind(df_female,df_male,df_steer)
+
+write.csv(df_all, file ="NAS_dfall.csv",row.names = F, na="")
